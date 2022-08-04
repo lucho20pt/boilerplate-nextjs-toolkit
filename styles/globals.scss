@@ -1,7 +1,7 @@
 /* import bootstrap to set changes */
 @import "styles/custom.scss";
 
-$body-bg: $white;
+$body-bg: $gray-200;
 $body-color: $gray-900;
 $font-family-sans-serif: "Poppins", sans-serif;
 $font-family-base: $font-family-sans-serif;
@@ -15,6 +15,63 @@ $btn-close-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' v
 $modal-header-border-color: $primary;
 $modal-footer-border-color: $primary;
 
-
-
 @import "~bootstrap";
+
+/*****************************/
+/* RESET & PROJECT STRUCTURE */
+/*****************************/
+
+* {
+    box-sizing: border-box;
+  }
+  
+  html{
+    font-size: 18px;
+    min-height: 100%;
+    &:before {
+      content: '';
+    //   background: url('../assets/images/bg_default.jpg') no-repeat center bottom / cover;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+  
+  ul,li,dl,dt,dd{
+    margin: 0; padding: 0; list-style: none;
+  }
+  
+  /* forms */
+  .form-control{
+    color: $white;
+    &:not(active){
+      background:transparent;
+      border-color: $primary;
+    }
+    &::placeholder{
+      color: $primary;
+    }
+    &:focus{
+      color: $white;
+      background-color: rgba($color: $black, $alpha: .5);
+    }
+  }
+  
+  /* alert */
+  .alert{
+    width: 100%;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: -50px;
+    z-index: 10;
+    text-align: center;
+  }
+  
+  /**/
+  .btn-outline-primary{
+    background-color: rgba($color: $black, $alpha: .5);
+  }
